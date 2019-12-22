@@ -12,15 +12,30 @@ eval "$(curl https://x-bash.github.io/style/tomorrow-night)"
 eval "$(curl https://x-bash.github.io/style/apple-pro)"
 ```
 
-# Initialize when bash ready
-
-Edit $HOME/.bashrc, add the code beside
+# One line installer
 
 ```bash
-
+curl https://x-bash.github.io/style/install
+# First install x
+# Then add in ~/.bashrc: `eval "$(x bash/boot)"`
+# Then add in ~/.bashrc: `@src style/el`
 ```
 
-If you are already initialize x-bash, just using
+# Initialize when bash ready
+
+**If you are already initialize x-bash, just using**
+
+To use x-bash
+
+```bash
+D="$HOME/.x-cmd.com/x-bash/boot" eval '[ -e $D ] || mkdir -p $(dirname $D) && curl "https://x-bash.github.io/boot" >$D && source $D'
+```
+
+```bash
+eval $(x bash/boot)
+```
+
+Then using `@src` to include style/el
 
 ```bash
 @src style/el
