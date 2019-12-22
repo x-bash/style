@@ -12,7 +12,7 @@ eval "$(curl https://x-bash.github.io/style/tomorrow-night)"
 eval "$(curl https://x-bash.github.io/style/apple-pro)"
 ```
 
-# One line installer
+## One line installer
 
 ```bash
 curl https://x-bash.github.io/style/install
@@ -21,7 +21,7 @@ curl https://x-bash.github.io/style/install
 # Then add in ~/.bashrc: `@src style/el`
 ```
 
-# Initialize when bash ready
+## Initialize when bash ready
 
 **If you are already initialize x-bash, just using**
 
@@ -51,9 +51,7 @@ STYLE="DEFAULT_STYLE" D="$HOME/.x-cmd.com/x-bash/style/$DEFAULT_STYLE" eval '[ -
 
 Replace the DEFAULT_STYLE to your prefered style
 
-
-# TODO
+## TODO
 
 1. Write a style manager, easily to switch between style
 2. Enrich this document
-
