@@ -28,11 +28,11 @@ curl https://x-bash.github.io/style/install
 To use x-bash
 
 ```bash
-D="$HOME/.x-cmd.com/x-bash/boot" eval '[ -e $D ] || mkdir -p $(dirname $D) && curl "https://x-bash.github.io/boot" >$D && source $D'
+D="$HOME/.x-cmd.com/x-bash/boot" eval '[ -e $D ] || (mkdir -p $(dirname $D) && curl "https://x-bash.github.io/boot" >$D) && source $D'
 ```
 
 ```bash
-eval $(x bash/boot)
+eval "$(x bash/boot)" && @run install
 ```
 
 Then using `@src` to include style/el
@@ -46,7 +46,7 @@ Then using `@src` to include style/el
 Add the following one-line-code in your bash_rc
 
 ```bash
-STYLE="DEFAULT_STYLE" D="$HOME/.x-cmd.com/x-bash/style/$DEFAULT_STYLE" eval '[ -e $D ] || mkdir -p $(dirname $D) && curl "https://x-bash.github.io/style/$DEFAULT_STYLE" >$D && source $D'
+STYLE="DEFAULT_STYLE" D="$HOME/.x-cmd.com/x-bash/style/$DEFAULT_STYLE" eval '[ -e $D ] || (mkdir -p $(dirname $D) && curl "https://x-bash.github.io/style/$DEFAULT_STYLE" >$D) && source $D'
 ```
 
 Replace the DEFAULT_STYLE to your prefered style
